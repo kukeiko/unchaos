@@ -2196,6 +2196,60 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@entity-space/browser@link:../entity-space-ported-but-old-repo/dist/browser::locator=%40unchaos%2Fsource%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@entity-space/browser@link:../entity-space-ported-but-old-repo/dist/browser::locator=%40unchaos%2Fsource%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@entity-space/cache@link:../entity-space-ported-but-old-repo/dist/cache::locator=%40unchaos%2Fsource%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@entity-space/cache@link:../entity-space-ported-but-old-repo/dist/cache::locator=%40unchaos%2Fsource%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@entity-space/common@link:../entity-space-ported-but-old-repo/dist/common::locator=%40unchaos%2Fsource%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@entity-space/common@link:../entity-space-ported-but-old-repo/dist/common::locator=%40unchaos%2Fsource%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@entity-space/elements@link:../entity-space-ported-but-old-repo/dist/elements::locator=%40unchaos%2Fsource%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@entity-space/elements@link:../entity-space-ported-but-old-repo/dist/elements::locator=%40unchaos%2Fsource%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@entity-space/execution@link:../entity-space-ported-but-old-repo/dist/execution::locator=%40unchaos%2Fsource%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@entity-space/execution@link:../entity-space-ported-but-old-repo/dist/execution::locator=%40unchaos%2Fsource%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@entity-space/lexer@link:../entity-space-ported-but-old-repo/dist/lexer::locator=%40unchaos%2Fsource%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@entity-space/lexer@link:../entity-space-ported-but-old-repo/dist/lexer::locator=%40unchaos%2Fsource%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@entity-space/node@link:../entity-space-ported-but-old-repo/dist/node::locator=%40unchaos%2Fsource%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@entity-space/node@link:../entity-space-ported-but-old-repo/dist/node::locator=%40unchaos%2Fsource%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@entity-space/schema@link:../entity-space-ported-but-old-repo/dist/schema::locator=%40unchaos%2Fsource%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@entity-space/schema@link:../entity-space-ported-but-old-repo/dist/schema::locator=%40unchaos%2Fsource%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@entity-space/utils@link:../entity-space-ported-but-old-repo/dist/utils::locator=%40unchaos%2Fsource%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@entity-space/utils@link:../entity-space-ported-but-old-repo/dist/utils::locator=%40unchaos%2Fsource%40workspace%3A."
+  languageName: node
+  linkType: soft
+
 "@esbuild/aix-ppc64@npm:0.25.4":
   version: 0.25.4
   resolution: "@esbuild/aix-ppc64@npm:0.25.4"
@@ -6204,6 +6258,15 @@ __metadata:
     "@angular/platform-browser": "npm:~19.2.0"
     "@angular/platform-browser-dynamic": "npm:~19.2.0"
     "@angular/router": "npm:~19.2.0"
+    "@entity-space/browser": "link:../entity-space-ported-but-old-repo/dist/browser"
+    "@entity-space/cache": "link:../entity-space-ported-but-old-repo/dist/cache"
+    "@entity-space/common": "link:../entity-space-ported-but-old-repo/dist/common"
+    "@entity-space/elements": "link:../entity-space-ported-but-old-repo/dist/elements"
+    "@entity-space/execution": "link:../entity-space-ported-but-old-repo/dist/execution"
+    "@entity-space/lexer": "link:../entity-space-ported-but-old-repo/dist/lexer"
+    "@entity-space/node": "link:../entity-space-ported-but-old-repo/dist/node"
+    "@entity-space/schema": "link:../entity-space-ported-but-old-repo/dist/schema"
+    "@entity-space/utils": "link:../entity-space-ported-but-old-repo/dist/utils"
     "@eslint/js": "npm:^9.8.0"
     "@nestjs/common": "npm:^10.0.2"
     "@nestjs/core": "npm:^10.0.2"
