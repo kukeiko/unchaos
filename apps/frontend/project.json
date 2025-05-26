@@ -1,28 +1,28 @@
 {
-    "name": "unchaos",
+    "name": "frontend",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "projectType": "application",
     "prefix": "app",
-    "sourceRoot": "apps/unchaos/src",
+    "sourceRoot": "apps/frontend/src",
     "tags": [],
     "targets": {
         "build": {
             "executor": "@angular-devkit/build-angular:application",
             "outputs": ["{options.outputPath}"],
             "options": {
-                "outputPath": "dist/apps/unchaos",
-                "index": "apps/unchaos/src/index.html",
-                "browser": "apps/unchaos/src/main.ts",
+                "outputPath": "dist/apps/frontend",
+                "index": "apps/frontend/src/index.html",
+                "browser": "apps/frontend/src/main.ts",
                 "polyfills": ["zone.js"],
-                "tsConfig": "apps/unchaos/tsconfig.app.json",
+                "tsConfig": "apps/frontend/tsconfig.app.json",
                 "inlineStyleLanguage": "scss",
                 "assets": [
                     {
                         "glob": "**/*",
-                        "input": "apps/unchaos/public"
+                        "input": "apps/frontend/public"
                     }
                 ],
-                "styles": ["apps/unchaos/src/styles.scss"],
+                "styles": ["apps/frontend/src/styles.scss"],
                 "scripts": []
             },
             "configurations": {
@@ -54,10 +54,10 @@
             "executor": "@angular-devkit/build-angular:dev-server",
             "configurations": {
                 "production": {
-                    "buildTarget": "unchaos:build:production"
+                    "buildTarget": "frontend:build:production"
                 },
                 "development": {
-                    "buildTarget": "unchaos:build:development"
+                    "buildTarget": "frontend:build:development"
                 }
             },
             "defaultConfiguration": "development"
@@ -65,7 +65,7 @@
         "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-                "buildTarget": "unchaos:build"
+                "buildTarget": "frontend:build"
             }
         },
         "lint": {
@@ -75,16 +75,16 @@
             "executor": "@nx/vite:test",
             "outputs": ["{options.reportsDirectory}"],
             "options": {
-                "reportsDirectory": "../../coverage/apps/unchaos"
+                "reportsDirectory": "../../coverage/apps/frontend"
             }
         },
         "serve-static": {
             "continuous": true,
             "executor": "@nx/web:file-server",
             "options": {
-                "buildTarget": "unchaos:build",
+                "buildTarget": "frontend:build",
                 "port": 4200,
-                "staticFilePath": "dist/apps/unchaos/browser",
+                "staticFilePath": "dist/apps/frontend/browser",
                 "spa": true
             }
         }

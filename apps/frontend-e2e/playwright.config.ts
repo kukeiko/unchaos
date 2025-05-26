@@ -24,7 +24,7 @@ export default defineConfig({
     },
     /* Run your local dev server before starting the tests */
     webServer: {
-        command: "yarn nx run unchaos:serve",
+        command: "yarn nx run frontend:serve",
         url: "http://localhost:4200",
         reuseExistingServer: true,
         cwd: workspaceRoot,

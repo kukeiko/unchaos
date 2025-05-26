@@ -6,7 +6,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig(() => ({
     root: __dirname,
-    cacheDir: "../../node_modules/.vite/apps/unchaos",
+    cacheDir: "../../node_modules/.vite/apps/frontend",
     plugins: [angular(), nxViteTsPaths(), nxCopyAssetsPlugin(["*.md"])],
     // Uncomment this if you are using workers.
     // worker: {
@@ -20,7 +20,7 @@ export default defineConfig(() => ({
         setupFiles: ["src/test-setup.ts"],
         reporters: ["default"],
         coverage: {
-            reportsDirectory: "../../coverage/apps/unchaos",
+            reportsDirectory: "../../coverage/apps/frontend",
             provider: "v8" as const,
         },
     },
