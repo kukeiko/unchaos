@@ -32,6 +32,11 @@
         "@nx/vite:test": {
             "cache": true,
             "inputs": ["default", "^production"]
+        },
+        "@nx/js:tsc": {
+            "cache": true,
+            "dependsOn": ["^build"],
+            "inputs": ["production", "^production"]
         }
     },
     "plugins": [
@@ -53,6 +58,20 @@
                 "buildTargetName": "build",
                 "serveTargetName": "serve",
                 "previewTargetName": "preview",
+                "buildDepsTargetName": "build-deps",
+                "watchDepsTargetName": "watch-deps"
+            }
+        },
+        {
+            "plugin": "@nx/vite/plugin",
+            "options": {
+                "buildTargetName": "build",
+                "testTargetName": "vite:test",
+                "serveTargetName": "serve",
+                "devTargetName": "dev",
+                "previewTargetName": "preview",
+                "serveStaticTargetName": "serve-static",
+                "typecheckTargetName": "typecheck",
                 "buildDepsTargetName": "build-deps",
                 "watchDepsTargetName": "watch-deps"
             }

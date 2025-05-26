@@ -6238,6 +6238,7 @@ __metadata:
     eslint-plugin-playwright: "npm:^1.6.2"
     jiti: "npm:2.4.2"
     jsdom: "npm:~22.1.0"
+    jsonc-eslint-parser: "npm:^2.1.0"
     nx: "npm:21.1.2"
     prettier: "npm:3.5.3"
     prettier-plugin-organize-imports: "npm:4.1.0"
