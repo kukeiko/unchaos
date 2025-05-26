@@ -2196,60 +2196,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@entity-space/browser@link:../entity-space-ported-but-old-repo/dist/browser::locator=%40unchaos%2Fsource%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@entity-space/browser@link:../entity-space-ported-but-old-repo/dist/browser::locator=%40unchaos%2Fsource%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@entity-space/cache@link:../entity-space-ported-but-old-repo/dist/cache::locator=%40unchaos%2Fsource%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@entity-space/cache@link:../entity-space-ported-but-old-repo/dist/cache::locator=%40unchaos%2Fsource%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@entity-space/common@link:../entity-space-ported-but-old-repo/dist/common::locator=%40unchaos%2Fsource%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@entity-space/common@link:../entity-space-ported-but-old-repo/dist/common::locator=%40unchaos%2Fsource%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@entity-space/elements@link:../entity-space-ported-but-old-repo/dist/elements::locator=%40unchaos%2Fsource%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@entity-space/elements@link:../entity-space-ported-but-old-repo/dist/elements::locator=%40unchaos%2Fsource%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@entity-space/execution@link:../entity-space-ported-but-old-repo/dist/execution::locator=%40unchaos%2Fsource%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@entity-space/execution@link:../entity-space-ported-but-old-repo/dist/execution::locator=%40unchaos%2Fsource%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@entity-space/lexer@link:../entity-space-ported-but-old-repo/dist/lexer::locator=%40unchaos%2Fsource%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@entity-space/lexer@link:../entity-space-ported-but-old-repo/dist/lexer::locator=%40unchaos%2Fsource%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@entity-space/node@link:../entity-space-ported-but-old-repo/dist/node::locator=%40unchaos%2Fsource%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@entity-space/node@link:../entity-space-ported-but-old-repo/dist/node::locator=%40unchaos%2Fsource%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@entity-space/schema@link:../entity-space-ported-but-old-repo/dist/schema::locator=%40unchaos%2Fsource%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@entity-space/schema@link:../entity-space-ported-but-old-repo/dist/schema::locator=%40unchaos%2Fsource%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@entity-space/utils@link:../entity-space-ported-but-old-repo/dist/utils::locator=%40unchaos%2Fsource%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@entity-space/utils@link:../entity-space-ported-but-old-repo/dist/utils::locator=%40unchaos%2Fsource%40workspace%3A."
-  languageName: node
-  linkType: soft
-
 "@esbuild/aix-ppc64@npm:0.25.4":
   version: 0.25.4
   resolution: "@esbuild/aix-ppc64@npm:0.25.4"
@@ -4979,6 +4925,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@primeng/themes@npm:^19.1.3":
+  version: 19.1.3
+  resolution: "@primeng/themes@npm:19.1.3"
+  dependencies:
+    "@primeuix/styled": "npm:^0.3.2"
+  checksum: 10c0/4e6d098ad605e7a720e63916edba8894149324e120d51513147720931fa9ee25148cf80b1c83e58951717866148f79c4c9b2f2b6dc51be0619b1c02bf23e2b72
+  languageName: node
+  linkType: hard
+
+"@primeuix/styled@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "@primeuix/styled@npm:0.3.2"
+  dependencies:
+    "@primeuix/utils": "npm:^0.3.2"
+  checksum: 10c0/e97b85095847084844e28fbb252cbfb2090be47fed88e36cd86e886cdf9bd88f1dafa60d407123eaa6503702158347e96c8199e1e38bcbf4f5d65eda5767f261
+  languageName: node
+  linkType: hard
+
+"@primeuix/utils@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "@primeuix/utils@npm:0.3.2"
+  checksum: 10c0/3ada284a982519c4e3cae9ed83e17dbae9d6e505a16b699fa37d69ca14e46350076389f70ef3a5b1a359ba6a0891299a20ec4f9a6ed330ab3bbda7d227e9b84f
+  languageName: node
+  linkType: hard
+
 "@rollup/rollup-android-arm-eabi@npm:4.34.8":
   version: 4.34.8
   resolution: "@rollup/rollup-android-arm-eabi@npm:4.34.8"
@@ -6258,15 +6229,6 @@ __metadata:
     "@angular/platform-browser": "npm:~19.2.0"
     "@angular/platform-browser-dynamic": "npm:~19.2.0"
     "@angular/router": "npm:~19.2.0"
-    "@entity-space/browser": "link:../entity-space-ported-but-old-repo/dist/browser"
-    "@entity-space/cache": "link:../entity-space-ported-but-old-repo/dist/cache"
-    "@entity-space/common": "link:../entity-space-ported-but-old-repo/dist/common"
-    "@entity-space/elements": "link:../entity-space-ported-but-old-repo/dist/elements"
-    "@entity-space/execution": "link:../entity-space-ported-but-old-repo/dist/execution"
-    "@entity-space/lexer": "link:../entity-space-ported-but-old-repo/dist/lexer"
-    "@entity-space/node": "link:../entity-space-ported-but-old-repo/dist/node"
-    "@entity-space/schema": "link:../entity-space-ported-but-old-repo/dist/schema"
-    "@entity-space/utils": "link:../entity-space-ported-but-old-repo/dist/utils"
     "@eslint/js": "npm:^9.8.0"
     "@nestjs/common": "npm:^10.0.2"
     "@nestjs/core": "npm:^10.0.2"
@@ -6286,6 +6248,7 @@ __metadata:
     "@nx/webpack": "npm:21.1.2"
     "@nx/workspace": "npm:21.1.2"
     "@playwright/test": "npm:^1.36.0"
+    "@primeng/themes": "npm:^19.1.3"
     "@schematics/angular": "npm:~19.2.0"
     "@swc-node/register": "npm:~1.9.1"
     "@swc/core": "npm:~1.5.7"
@@ -6305,6 +6268,7 @@ __metadata:
     nx: "npm:21.1.2"
     prettier: "npm:3.5.3"
     prettier-plugin-organize-imports: "npm:4.1.0"
+    primeng: "npm:^19.1.3"
     reflect-metadata: "npm:^0.1.13"
     rxjs: "npm:~7.8.0"
     tslib: "npm:^2.3.0"
@@ -14081,6 +14045,26 @@ __metadata:
     ansi-styles: "npm:^5.0.0"
     react-is: "npm:^18.0.0"
   checksum: 10c0/edc5ff89f51916f036c62ed433506b55446ff739358de77207e63e88a28ca2894caac6e73dcb68166a606e51c8087d32d400473e6a9fdd2dbe743f46c9c0276f
+  languageName: node
+  linkType: hard
+
+"primeng@npm:^19.1.3":
+  version: 19.1.3
+  resolution: "primeng@npm:19.1.3"
+  dependencies:
+    "@primeuix/styled": "npm:^0.3.2"
+    "@primeuix/utils": "npm:^0.3.2"
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/animations": ^19.0.0
+    "@angular/cdk": ^19.0.0
+    "@angular/common": ^19.0.0
+    "@angular/core": ^19.0.0
+    "@angular/forms": ^19.0.0
+    "@angular/platform-browser": ^19.0.0
+    "@angular/router": ^19.0.0
+    rxjs: ^6.0.0 || ^7.8.1
+  checksum: 10c0/55d60d4198a5c6d1ae3b54637bf91bac8f3e350e354fabf9c847b2fcdb5a24dd2aefd8ecf43fca9e4b7ccd070b06c560f855de0ab5694144d92c74f99c6464a6
   languageName: node
   linkType: hard
 

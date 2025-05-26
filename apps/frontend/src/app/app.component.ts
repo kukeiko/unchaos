@@ -3,11 +3,12 @@ import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { ArtistDto, common } from "@unchaos/common";
+import { ButtonModule } from "primeng/button";
 import { lastValueFrom } from "rxjs";
 import { NxWelcomeComponent } from "./nx-welcome.component";
 
 @Component({
-    imports: [NxWelcomeComponent, RouterModule, NgFor, JsonPipe],
+    imports: [NxWelcomeComponent, RouterModule, NgFor, JsonPipe, ButtonModule],
     selector: "app-root",
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.scss",
