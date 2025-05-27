@@ -7,8 +7,19 @@
     ],
     "artists": [
         {
-            "id": 3,
+            "id": 1,
             "name": "bar",
+            "metadata": {
+                "createdAt": "2025-05-26T19:15:32.844Z",
+                "createdById": 1
+            }
+        }
+    ],
+    "songs": [
+        {
+            "id": 1,
+            "name": "bar song",
+            "artistId": 1,
             "metadata": {
                 "createdAt": "2025-05-26T19:15:32.844Z",
                 "createdById": 1

@@ -3,6 +3,7 @@ import { AsyncLocalStorage } from "async_hooks";
 
 enum AsyncStorageKeys {
     UserId = "user-id",
+    TraceQueries = "trace-queries",
 }
 
 @Injectable()
@@ -34,5 +35,13 @@ export class AsyncStoreService {
 
     getUserId(): number {
         return this.get(AsyncStorageKeys.UserId);
+    }
+
+    setTraceQueries(flag: boolean): void {
+        this.set(AsyncStorageKeys.TraceQueries, flag);
+    }
+
+    getTraceQueries(): boolean {
+        return this.get(AsyncStorageKeys.TraceQueries);
     }
 }

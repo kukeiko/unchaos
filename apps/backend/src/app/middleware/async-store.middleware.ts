@@ -9,6 +9,7 @@ export class AsyncStoreMiddleware implements NestMiddleware {
     use(request: Request, response: Response, next: NextFunction) {
         this.asyncStoreService.run(() => {
             this.asyncStoreService.setUserId(1);
+            this.asyncStoreService.setTraceQueries(request.query.traceQueries === "true");
             next();
         });
     }

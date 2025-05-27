@@ -15,13 +15,17 @@ export class ArtistsController {
     getArtistById(
         @Param("id", ParseIntPipe) id: number,
         @Query("withUsers", new ParseBoolPipe({ optional: true })) withUsers?: boolean,
+        @Query("withSongs", new ParseBoolPipe({ optional: true })) withSongs?: boolean,
     ): Promise<ArtistDto> {
         // [todo] throw 404 instead: add ability to entity-space to customize thrown errors
         // or add an interceptor that can identify the "NotFound" error and map it
         return this.workspace
             .from(ArtistDtoBlueprint)
             .where({ id })
-            .select({ metadata: { createdBy: withUsers || undefined } })
+            .select({
+                metadata: { createdBy: withUsers || undefined },
+                songs: withSongs ? { metadata: { createdBy: withUsers || undefined } } : undefined,
+            })
             .getOne();
     }
 

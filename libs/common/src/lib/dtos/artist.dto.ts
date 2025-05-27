@@ -1,12 +1,13 @@
 import { EntityBlueprint } from "@entity-space/common";
-import { RecordMetadataDtoBlueprint } from "./record-metadata.dto";
+import { DatabaseRecordDtoBlueprint } from "./database-record.dto";
+import { SongDtoBlueprint } from "./song.dto";
 
-const { register, id, string, entity, readonly } = EntityBlueprint;
+const { register, id, string, entity, array, optional } = EntityBlueprint;
 
-export class ArtistDtoBlueprint {
+export class ArtistDtoBlueprint extends DatabaseRecordDtoBlueprint {
     id = id();
     name = string();
-    metadata = entity(RecordMetadataDtoBlueprint, { readonly });
+    songs = entity(SongDtoBlueprint, this.id, song => song.artistId, { array, optional });
 }
 
 register(ArtistDtoBlueprint, { name: "artist", sort: (a, b) => a.name.localeCompare(b.name) });
