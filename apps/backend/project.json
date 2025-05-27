@@ -16,7 +16,8 @@
                 "sourceMap": true,
                 "outputPath": "dist/apps/backend/",
                 "compiler": "tsc",
-                "target": "node"
+                "target": "node",
+                "assets": ["apps/backend/src/assets"]
             }
         },
         "serve": {
