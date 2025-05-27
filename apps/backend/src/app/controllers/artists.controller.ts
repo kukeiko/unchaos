@@ -12,21 +12,31 @@ export class ArtistsController {
     }
 
     @Get(":id")
-    getArtistById(
+    async getArtistById(
         @Param("id", ParseIntPipe) id: number,
-        @Query("withUsers", new ParseBoolPipe({ optional: true })) withUsers?: boolean,
-        @Query("withSongs", new ParseBoolPipe({ optional: true })) withSongs?: boolean,
+        @Query("users", new ParseBoolPipe({ optional: true })) users?: boolean,
+        @Query("songs", new ParseBoolPipe({ optional: true })) songs?: boolean,
     ): Promise<ArtistDto> {
         // [todo] throw 404 instead: add ability to entity-space to customize thrown errors
         // or add an interceptor that can identify the "NotFound" error and map it
-        return this.workspace
+        const artist = await this.workspace
             .from(ArtistDtoBlueprint)
             .where({ id })
-            .select({
-                metadata: { createdBy: withUsers || undefined },
-                songs: withSongs ? { metadata: { createdBy: withUsers || undefined } } : undefined,
-            })
+            .select({ songs: songs ? true : undefined })
             .getOne();
+
+        if (users) {
+            await this.workspace
+                .for(ArtistDtoBlueprint)
+                .select({
+                    metadata: { createdBy: true },
+                    songs: { metadata: { createdBy: true } },
+                })
+                .cache(true)
+                .hydrateOne(artist);
+        }
+
+        return artist;
     }
 
     @Post()
