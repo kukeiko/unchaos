@@ -2196,6 +2196,55 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@entity-space/common@npm:0.7.0-alpha.2":
+  version: 0.7.0-alpha.2
+  resolution: "@entity-space/common@npm:0.7.0-alpha.2"
+  dependencies:
+    "@entity-space/elements": "npm:0.7.0-alpha.2"
+    "@entity-space/execution": "npm:0.7.0-alpha.2"
+  checksum: 10c0/bd73a7eeee42bdd29f6a8f037bf5bcc8f49cb77eab8bc2c83c0b2025233d7717c07ae08463ea5c60806d7b52300d82f167a0b14ab192bdab15c1f843cb6c1889
+  languageName: node
+  linkType: hard
+
+"@entity-space/elements@npm:0.7.0-alpha.2":
+  version: 0.7.0-alpha.2
+  resolution: "@entity-space/elements@npm:0.7.0-alpha.2"
+  dependencies:
+    "@entity-space/lexer": "npm:0.7.0-alpha.2"
+    "@entity-space/utils": "npm:0.7.0-alpha.2"
+    lodash: "npm:4.17.21"
+  checksum: 10c0/32c6964c3163cb0da70253e12ebe12f1dc64f1744e48611ad47b6ffa33ef358ff9f2ee2235e8d0c7617fc08178d842f8e580609148d832cb96b3a244773c8332
+  languageName: node
+  linkType: hard
+
+"@entity-space/execution@npm:0.7.0-alpha.2":
+  version: 0.7.0-alpha.2
+  resolution: "@entity-space/execution@npm:0.7.0-alpha.2"
+  dependencies:
+    "@entity-space/elements": "npm:0.7.0-alpha.2"
+    "@entity-space/utils": "npm:0.7.0-alpha.2"
+  peerDependencies:
+    rxjs: ^7.4.0
+  checksum: 10c0/85e72ed2132b02e473fa1981bcced33e9e96018785165a3390dfc78f8ca34194ec835d17e6f11652bd8b95a1ff9a4f8bc83539b3ec1e894bac6cddc68d4f3c2f
+  languageName: node
+  linkType: hard
+
+"@entity-space/lexer@npm:0.7.0-alpha.2":
+  version: 0.7.0-alpha.2
+  resolution: "@entity-space/lexer@npm:0.7.0-alpha.2"
+  dependencies:
+    "@entity-space/utils": "npm:0.7.0-alpha.2"
+  checksum: 10c0/d517263dc36feef14550f5c4ae5c43cdb434affe1922273d18cd0850083075382f13c095b8d4ce5145184f8d0a8bc688b2396257daa0990a41a0099bf7682897
+  languageName: node
+  linkType: hard
+
+"@entity-space/utils@npm:0.7.0-alpha.2":
+  version: 0.7.0-alpha.2
+  resolution: "@entity-space/utils@npm:0.7.0-alpha.2"
+  checksum: 10c0/8631f304f1caeb3cc3adc99b692a7e48dfc629ad08d303e0b05cadcfa5cc9daf43b43891e15b5377fb7341bed5e31bf62fa0f70f93b15dfdc112057dcd6bf562
+  languageName: node
+  linkType: hard
+
 "@esbuild/aix-ppc64@npm:0.25.4":
   version: 0.25.4
   resolution: "@esbuild/aix-ppc64@npm:0.25.4"
@@ -6229,6 +6278,7 @@ __metadata:
     "@angular/platform-browser": "npm:~19.2.0"
     "@angular/platform-browser-dynamic": "npm:~19.2.0"
     "@angular/router": "npm:~19.2.0"
+    "@entity-space/common": "npm:0.7.0-alpha.2"
     "@eslint/js": "npm:^9.8.0"
     "@nestjs/common": "npm:^10.0.2"
     "@nestjs/core": "npm:^10.0.2"
@@ -11963,7 +12013,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.21":
+"lodash@npm:4.17.21, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10c0/d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
