@@ -36,7 +36,7 @@ import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
     ],
     template: `
         <nz-space nzDirection="vertical">
-            <uc-search-box *nzSpaceItem [(ngModel)]="searchText" />
+            <uc-search-box *nzSpaceItem [(ngModel)]="searchText" placeholder="Search Songs" />
             <nz-table
                 *nzSpaceItem
                 nzShowSizeChanger

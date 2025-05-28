@@ -1,5 +1,5 @@
 import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, input, signal } from "@angular/core";
 import { ControlValueAccessor, FormsModule } from "@angular/forms";
 import { NzIconModule } from "ng-zorro-antd/icon";
 import { NzInputModule } from "ng-zorro-antd/input";
@@ -20,7 +20,7 @@ import { ngModelProvider } from "../utils";
             <input
                 type="text"
                 nz-input
-                placeholder="input search text"
+                [placeholder]="placeholder()"
                 [disabled]="disabled()"
                 [(ngModel)]="value"
                 (ngModelChange)="onChange($event)"
@@ -38,6 +38,7 @@ export class SearchBoxComponent implements ControlValueAccessor {
 
     value = signal("");
     disabled = signal(false);
+    placeholder = input("Search");
 
     writeValue(value: string): void {
         this.value.set(value);
