@@ -10,4 +10,8 @@ export const appRoutes: Routes = [
         path: "music",
         loadChildren: () => import("./components/pages/music-page/music-page.routes").then(c => c.musicPageRoutes),
     },
+    {
+        path: "sandbox",
+        loadChildren: () => import("./components/pages/sandbox-page/sandbox-page.routes").then(c => c.sandboxPageRoutes),
+    },
 ];
