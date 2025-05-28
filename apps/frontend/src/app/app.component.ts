@@ -1,26 +1,15 @@
-import { JsonPipe, NgFor } from "@angular/common";
-import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { ArtistDto, common } from "@unchaos/common";
-import { ButtonModule } from "primeng/button";
-import { lastValueFrom } from "rxjs";
-import { NxWelcomeComponent } from "./nx-welcome.component";
+import { RouterLink, RouterOutlet } from "@angular/router";
+import { NzIconModule } from "ng-zorro-antd/icon";
+import { NzLayoutModule } from "ng-zorro-antd/layout";
+import { NzMenuModule } from "ng-zorro-antd/menu";
 
 @Component({
-    imports: [NxWelcomeComponent, RouterModule, NgFor, JsonPipe, ButtonModule],
-    selector: "app-root",
+    selector: "uc-root",
+    imports: [RouterLink, RouterOutlet, NzIconModule, NzLayoutModule, NzMenuModule],
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-    constructor(private readonly httpClient: HttpClient) {}
-
-    title = "unchaos";
-    test = common();
-    artists: ArtistDto[] = [];
-
-    async ngOnInit(): Promise<void> {
-        this.artists = await lastValueFrom(this.httpClient.get<ArtistDto[]>("/api/artists"));
-    }
+    isCollapsed = false;
 }

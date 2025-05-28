@@ -368,6 +368,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/animations@npm:~19.2.0":
+  version: 19.2.13
+  resolution: "@angular/animations@npm:19.2.13"
+  dependencies:
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/common": 19.2.13
+    "@angular/core": 19.2.13
+  checksum: 10c0/8764dc7d97990d4f9a43dae2fe3af1863e9fe5aeb75cc52445cd6a5f6f871fad7671860aa32d1a126f5b80f1a9130df6c8a67ce09716cde57924d60487993086
+  languageName: node
+  linkType: hard
+
 "@angular/build@npm:19.2.13, @angular/build@npm:~19.2.0":
   version: 19.2.13
   resolution: "@angular/build@npm:19.2.13"
@@ -435,6 +447,20 @@ __metadata:
     tailwindcss:
       optional: true
   checksum: 10c0/1313a62212fb1d85b5207d7db30a0b9a124f0cf41995af8eb3acd94f32d831b9bd421ab290b79fdbdec18dee1f3c67a3b1040c9a66050cf3abb95136503786c4
+  languageName: node
+  linkType: hard
+
+"@angular/cdk@npm:^19.0.0":
+  version: 19.2.17
+  resolution: "@angular/cdk@npm:19.2.17"
+  dependencies:
+    parse5: "npm:^7.1.2"
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/common": ^19.0.0 || ^20.0.0
+    "@angular/core": ^19.0.0 || ^20.0.0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 10c0/1a8ad9dc0ff7700675be5fbbe22f79a9de5053ad321f911fb721fc4f9e50c09fe7c80e94465eb2690be189bd0062518d65b7b180c7b5cd9eadf2f071e138d199
   languageName: node
   linkType: hard
 
@@ -583,6 +609,39 @@ __metadata:
     "@angular/platform-browser": 19.2.13
     rxjs: ^6.5.3 || ^7.4.0
   checksum: 10c0/0c264cb2ff499134eb08334a7a633bff81d0dee9e325e9c675af2185cbb8ae71adc3f1532817df1080e7480b28583370d5456df30a1fc3eb7cb6c94d600b99ca
+  languageName: node
+  linkType: hard
+
+"@ant-design/colors@npm:^7.0.0":
+  version: 7.2.1
+  resolution: "@ant-design/colors@npm:7.2.1"
+  dependencies:
+    "@ant-design/fast-color": "npm:^2.0.6"
+  checksum: 10c0/4748a0bfb1ea98e08e29dcd4f7afd2781ae2119f783e6e9f80e889fd15fc19f7137e2a3d91f26bae2ab1ee76c04d520cc35f2bb0a708cd71e463f4d9deb4192d
+  languageName: node
+  linkType: hard
+
+"@ant-design/fast-color@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "@ant-design/fast-color@npm:2.0.6"
+  dependencies:
+    "@babel/runtime": "npm:^7.24.7"
+  checksum: 10c0/8d30649bd8d4e56d5c48393fcf0ad5c24d1099ec4cbf88f55bd9f4489e61efc30087d301da384c4ed21f2d5597087c8ba27dfbcc7693915310c26d307f5a8276
+  languageName: node
+  linkType: hard
+
+"@ant-design/icons-angular@npm:^19.0.0":
+  version: 19.0.0
+  resolution: "@ant-design/icons-angular@npm:19.0.0"
+  dependencies:
+    "@ant-design/colors": "npm:^7.0.0"
+    tslib: "npm:^2.0.0"
+  peerDependencies:
+    "@angular/common": ^19.0.0
+    "@angular/core": ^19.0.0
+    "@angular/platform-browser": ^19.0.0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 10c0/e3285924042ce436fd9bde093d7502d7e9c24d02a5b6e059a02dda25429ae54fe82708a851f194c28237e46251636f971a00768d6ab9cb0c0d136e2a9994eda7
   languageName: node
   linkType: hard
 
@@ -2097,6 +2156,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.24.7":
+  version: 7.27.3
+  resolution: "@babel/runtime@npm:7.27.3"
+  checksum: 10c0/b860fe374a36fddbeeb238e52e59443abcacc046eebda1bf278bffbc67b5c8f713b939e09c126b086ca5f97cba1987ea17fd1737568bc50fedb1f6ef1cf46f69
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.26.9, @babel/template@npm:^7.27.1, @babel/template@npm:^7.3.3":
   version: 7.27.2
   resolution: "@babel/template@npm:7.27.2"
@@ -2151,6 +2217,13 @@ __metadata:
   version: 2.5.0
   resolution: "@bufbuild/protobuf@npm:2.5.0"
   checksum: 10c0/34d974f7c56183f012fe24e9e47cb3d451116b8267a7ee4c0ab0e783c44d2acd2ce97f1c519858d7df63b5a39c2faaf6baf28198c07d22da14217800b4f80893
+  languageName: node
+  linkType: hard
+
+"@ctrl/tinycolor@npm:^3.6.0":
+  version: 3.6.1
+  resolution: "@ctrl/tinycolor@npm:3.6.1"
+  checksum: 10c0/444d81612cd8c5c802a3d1253df83d5f77d3db87f351861655683a4743990e6b38976bf2e4129591c5a258607b63574b3c7bed702cf6a0eb7912222edf4570e9
   languageName: node
   linkType: hard
 
@@ -6267,6 +6340,7 @@ __metadata:
     "@angular-devkit/build-angular": "npm:~19.2.0"
     "@angular-devkit/core": "npm:~19.2.0"
     "@angular-devkit/schematics": "npm:~19.2.0"
+    "@angular/animations": "npm:~19.2.0"
     "@angular/build": "npm:~19.2.0"
     "@angular/cli": "npm:~19.2.0"
     "@angular/common": "npm:~19.2.0"
@@ -6315,6 +6389,7 @@ __metadata:
     jiti: "npm:2.4.2"
     jsdom: "npm:~22.1.0"
     jsonc-eslint-parser: "npm:^2.1.0"
+    ng-zorro-antd: "npm:^19.3.0"
     nx: "npm:21.1.2"
     prettier: "npm:3.5.3"
     prettier-plugin-organize-imports: "npm:4.1.0"
@@ -8350,6 +8425,15 @@ __metadata:
     whatwg-mimetype: "npm:^3.0.0"
     whatwg-url: "npm:^12.0.0"
   checksum: 10c0/928d9a21db31d3dcee125d514fddfeb88067c348b1225e9d2c6ca55db16e1cbe49bf58c092cae7163de958f415fd5c612c2aef2eef87896e097656fce205d766
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^2.16.1":
+  version: 2.30.0
+  resolution: "date-fns@npm:2.30.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.21.0"
+  checksum: 10c0/e4b521fbf22bc8c3db332bbfb7b094fd3e7627de0259a9d17c7551e2d2702608a7307a449206065916538e384f37b181565447ce2637ae09828427aed9cb5581
   languageName: node
   linkType: hard
 
@@ -12671,6 +12755,26 @@ __metadata:
   version: 2.6.2
   resolution: "neo-async@npm:2.6.2"
   checksum: 10c0/c2f5a604a54a8ec5438a342e1f356dff4bc33ccccdb6dc668d94fe8e5eccfc9d2c2eea6064b0967a767ba63b33763f51ccf2cd2441b461a7322656c1f06b3f5d
+  languageName: node
+  linkType: hard
+
+"ng-zorro-antd@npm:^19.3.0":
+  version: 19.3.0
+  resolution: "ng-zorro-antd@npm:19.3.0"
+  dependencies:
+    "@angular/cdk": "npm:^19.0.0"
+    "@ant-design/icons-angular": "npm:^19.0.0"
+    "@ctrl/tinycolor": "npm:^3.6.0"
+    date-fns: "npm:^2.16.1"
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/animations": ^19.0.0
+    "@angular/common": ^19.0.0
+    "@angular/core": ^19.0.0
+    "@angular/forms": ^19.0.0
+    "@angular/platform-browser": ^19.0.0
+    "@angular/router": ^19.0.0
+  checksum: 10c0/2263b7f6f680ccb19dad72e0ae5d8141f62e3d2f49a0d2ffc3fcde0e3289fcfa85c62aebea0271dc3b83248c4537c5f4f3001883436fefc30a50ad7fba8f95bc
   languageName: node
   linkType: hard
 

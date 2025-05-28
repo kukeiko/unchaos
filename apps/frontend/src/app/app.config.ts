@@ -2,8 +2,10 @@ import { provideHttpClient } from "@angular/common/http";
 import { ApplicationConfig, provideZoneChangeDetection } from "@angular/core";
 import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 import { provideRouter } from "@angular/router";
+import { provideNzIcons } from "ng-zorro-antd/icon";
 import { providePrimeNG } from "primeng/config";
 import { appRoutes } from "./app.routes";
+import { icons } from "./icons-provider";
 import { UnchaosPreset } from "./unchaos-theme-preset";
 
 export const appConfig: ApplicationConfig = {
@@ -12,6 +14,7 @@ export const appConfig: ApplicationConfig = {
         provideRouter(appRoutes),
         provideHttpClient(),
         provideAnimationsAsync(),
+        provideNzIcons(icons),
         providePrimeNG({
             theme: {
                 preset: UnchaosPreset,

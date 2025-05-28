@@ -2,7 +2,7 @@
     "name": "frontend",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "projectType": "application",
-    "prefix": "app",
+    "prefix": "uc",
     "sourceRoot": "apps/frontend/src",
     "tags": [],
     "targets": {
@@ -20,6 +20,11 @@
                     {
                         "glob": "**/*",
                         "input": "apps/frontend/public"
+                    },
+                    {
+                        "glob": "**/*",
+                        "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                        "output": "/assets/"
                     }
                 ],
                 "styles": ["apps/frontend/src/styles.scss"],
