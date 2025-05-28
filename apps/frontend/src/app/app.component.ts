@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { RouterLink, RouterOutlet } from "@angular/router";
+import { EntityServiceContainer } from "@entity-space/common";
+import { EntityService } from "@unchaos/frontend/common";
 import { NzIconModule } from "ng-zorro-antd/icon";
 import { NzLayoutModule } from "ng-zorro-antd/layout";
 import { NzMenuModule } from "ng-zorro-antd/menu";
@@ -11,5 +13,10 @@ import { NzMenuModule } from "ng-zorro-antd/menu";
     styleUrl: "./app.component.scss",
 })
 export class AppComponent {
+    constructor(entityServices: EntityServiceContainer, entityService: EntityService) {
+        entityServices.getTracing().enableConsole();
+        entityService.useSongs();
+    }
+
     isCollapsed = false;
 }

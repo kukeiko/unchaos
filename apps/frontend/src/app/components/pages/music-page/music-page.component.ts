@@ -3,14 +3,14 @@ import { HttpClient } from "@angular/common/http";
 import { ChangeDetectionStrategy, Component, computed, model, Signal, signal } from "@angular/core";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { FormsModule } from "@angular/forms";
-import { AlbumDto, ArtistDto, SongDto } from "@unchaos/common";
+import { EntityWorkspace } from "@entity-space/common";
+import { AlbumDto, ArtistDto, SongDto, SongDtoBlueprint } from "@unchaos/common";
 import {
     catchAndShowError,
     isDefined,
     nzTableQueryParamsToCriteria,
     SearchBoxComponent,
     toNzTableFilterListItem,
-    toQueryParams,
 } from "@unchaos/frontend/common";
 import { NzIconModule } from "ng-zorro-antd/icon";
 import { NzInputModule } from "ng-zorro-antd/input";
@@ -64,6 +64,7 @@ import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
 })
 export class MusicPageComponent {
     constructor(
+        private readonly workspace: EntityWorkspace,
         private readonly httpClient: HttpClient,
         private readonly messageService: NzMessageService,
     ) {
@@ -91,10 +92,11 @@ export class MusicPageComponent {
 
             this.loading.set(true);
 
-            return this.httpClient
-                .get<
-                    SongDto[]
-                >("api/songs", { params: toQueryParams({ album: true, artist: true, albumId, artistId }) })
+            return this.workspace
+                .from(SongDtoBlueprint)
+                .where({ albumId, artistId })
+                .select({ album: true, artist: true })
+                .get$()
                 .pipe(
                     delay(1000),
                     catchAndShowError<SongDto[]>(this.messageService, []),
@@ -116,6 +118,8 @@ export class MusicPageComponent {
         this.queryParams$.next(params);
     }
 
+    // [todo] add "matchesKeywords()" utility
+    // [todo] consider adding filter functionality to blueprint metadata
     filterSong(song: SongDto, searchText: string): boolean {
         const keywords = searchText
             .split(" ")
