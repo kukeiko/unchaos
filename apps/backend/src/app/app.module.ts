@@ -1,8 +1,7 @@
 import { EntityServiceContainer, EntityWorkspace } from "@entity-space/common";
-import { MiddlewareConsumer, Module, NestModule, OnModuleInit, Provider } from "@nestjs/common";
-import { AppController } from "./app.controller";
-import { AppService } from "./app.service";
+import { MiddlewareConsumer, Module, NestModule, OnModuleInit, Provider, Type } from "@nestjs/common";
 import { ArtistsController } from "./controllers/artists.controller";
+import { SongsController } from "./controllers/songs.controller";
 import { UsersController } from "./controllers/users.controller";
 import { AsyncStoreMiddleware } from "./middleware/async-store.middleware";
 import { EnableTraceQueriesMiddleware } from "./middleware/enable-trace-queries.middleware";
@@ -12,7 +11,6 @@ import { UserRepository } from "./repositories/user.repository";
 import { AsyncStoreService } from "./services/async-store.service";
 import { EntityService } from "./services/entity.service";
 
-const REPOSITORIES: Provider[] = [ArtistRepository, SongRepository, UserRepository];
 const ENTITY_SPACE: Provider[] = [
     { provide: EntityServiceContainer, useValue: new EntityServiceContainer() },
     {
@@ -22,10 +20,15 @@ const ENTITY_SPACE: Provider[] = [
     },
 ];
 
+const REPOSITORIES: Provider[] = [ArtistRepository, SongRepository, UserRepository];
+
+const CONTROLLERS: Type[] = [ArtistsController, UsersController, SongsController];
+
+const SERVICES: Provider[] = [AsyncStoreService, EntityService];
+
 @Module({
-    imports: [],
-    controllers: [AppController, ArtistsController, UsersController],
-    providers: [AsyncStoreService, AppService, EntityService, ...REPOSITORIES, ...ENTITY_SPACE],
+    controllers: [...CONTROLLERS],
+    providers: [...ENTITY_SPACE, ...SERVICES, ...REPOSITORIES],
 })
 export class AppModule implements NestModule, OnModuleInit {
     constructor(private readonly entityService: EntityService) {}

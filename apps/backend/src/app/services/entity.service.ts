@@ -39,7 +39,8 @@ export class EntityService {
             .addSource({
                 where: { artistId: { $equals: true } },
                 load: ({ criteria: { artistId } }) => this.songRepository.getByArtistId([artistId.value]),
-            });
+            })
+            .addSource({ load: () => this.songRepository.getAll() });
 
         return this;
     }

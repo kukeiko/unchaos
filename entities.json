@@ -24,6 +24,23 @@
                 "createdAt": "2025-05-26T19:15:32.844Z",
                 "createdById": 1
             }
+        },
+        {
+            "id": 2,
+            "name": "foo song",
+            "artistId": 1,
+            "metadata": {
+                "createdAt": "2025-05-26T19:15:32.844Z",
+                "createdById": 1
+            }
+        },
+        {
+            "id": 3,
+            "name": "invalid song",
+            "metadata": {
+                "createdAt": "2025-05-26T19:15:32.844Z",
+                "createdById": 1
+            }
         }
     ]
 }
