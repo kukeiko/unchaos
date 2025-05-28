@@ -3,7 +3,12 @@ import { HttpClient } from "@angular/common/http";
 import { ChangeDetectionStrategy, Component, computed, Signal, signal } from "@angular/core";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { AlbumDto, ArtistDto, SongDto } from "@unchaos/common";
-import { catchAndShowError, nzTableQueryParamsToCriteria, toNzTableFilterListItem } from "@unchaos/frontend/common";
+import {
+    catchAndShowError,
+    nzTableQueryParamsToCriteria,
+    toNzTableFilterListItem,
+    toQueryParams,
+} from "@unchaos/frontend/common";
 import { NzMessageService } from "ng-zorro-antd/message";
 import { NzTableFilterList, NzTableModule, NzTableQueryParams } from "ng-zorro-antd/table";
 import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
@@ -72,11 +77,15 @@ export class MusicPageComponent {
             this.loading.set(true);
 
             return this.httpClient
-                .get<SongDto[]>("api/songs", { params: { album: true, artist: true, albumId, artistId } })
+                .get<
+                    SongDto[]
+                >("api/songs", { params: toQueryParams({ album: true, artist: true, albumId, artistId }) })
                 .pipe(
                     delay(1000),
                     catchAndShowError<SongDto[]>(this.messageService, []),
-                    finalize(() => this.loading.set(false)),
+                    finalize(() => {
+                        this.loading.set(false);
+                    }),
                 );
         }),
     );
