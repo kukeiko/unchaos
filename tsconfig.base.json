@@ -17,7 +17,8 @@
         "noImplicitOverride": true,
         "baseUrl": ".",
         "paths": {
-            "@unchaos/common": ["libs/common/src/index.ts"]
+            "@unchaos/common": ["libs/common/src/index.ts"],
+            "@unchaos/frontend/common": ["libs/frontend/common/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

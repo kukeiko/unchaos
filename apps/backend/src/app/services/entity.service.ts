@@ -1,6 +1,7 @@
 import { EntityServiceContainer } from "@entity-space/common";
 import { Injectable } from "@nestjs/common";
-import { ArtistDtoBlueprint, SongDtoBlueprint, UserDtoBlueprint } from "@unchaos/common";
+import { AlbumDtoBlueprint, ArtistDtoBlueprint, SongDtoBlueprint, UserDtoBlueprint } from "@unchaos/common";
+import { AlbumRepository } from "../repositories/album.repository";
 import { ArtistRepository } from "../repositories/artist.repository";
 import { SongRepository } from "../repositories/song.repository";
 import { UserRepository } from "../repositories/user.repository";
@@ -10,6 +11,7 @@ export class EntityService {
     constructor(
         private readonly services: EntityServiceContainer,
         private readonly artistRepository: ArtistRepository,
+        private readonly albumRepository: AlbumRepository,
         private readonly songRepository: SongRepository,
         private readonly userRepository: UserRepository,
     ) {}
@@ -25,6 +27,18 @@ export class EntityService {
             .addCreateMutator({
                 create: ({ entity }) => this.artistRepository.create(entity),
             });
+
+        return this;
+    }
+
+    useAlbums(): this {
+        this.services
+            .for(AlbumDtoBlueprint)
+            .addSource({
+                where: { id: { $inArray: true } },
+                load: ({ criteria: { id } }) => this.albumRepository.getById(id.value),
+            })
+            .addSource({ load: () => this.albumRepository.getAll() });
 
         return this;
     }

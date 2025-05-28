@@ -1,4 +1,5 @@
 import { EntityBlueprint } from "@entity-space/common";
+import { AlbumDtoBlueprint } from "./album.dto";
 import { ArtistDtoBlueprint } from "./artist.dto";
 import { DatabaseRecordDtoBlueprint } from "./database-record.dto";
 
@@ -9,6 +10,8 @@ export class SongDtoBlueprint extends DatabaseRecordDtoBlueprint {
     name = string();
     artistId = number();
     artist = entity(ArtistDtoBlueprint, this.artistId, artist => artist.id, { optional });
+    albumId = number();
+    album = entity(AlbumDtoBlueprint, this.albumId, album => album.id, { optional });
 }
 
 register(SongDtoBlueprint, { name: "song", sort: (a, b) => a.name.localeCompare(b.name) });

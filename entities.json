@@ -8,9 +8,29 @@
     "artists": [
         {
             "id": 1,
-            "name": "bar",
+            "name": "Infected Mushroom",
             "metadata": {
                 "createdAt": "2025-05-26T19:15:32.844Z",
+                "createdById": 1
+            }
+        }
+    ],
+    "albums": [
+        {
+            "id": 1,
+            "artistId": 1,
+            "name": "IM The Supervisor",
+            "metadata": {
+                "createdAt": "2025-05-28T18:50:32.844Z",
+                "createdById": 1
+            }
+        },
+        {
+            "id": 2,
+            "artistId": 1,
+            "name": "Converting Vegetarians II",
+            "metadata": {
+                "createdAt": "2025-05-28T18:50:32.844Z",
                 "createdById": 1
             }
         }
@@ -18,24 +38,36 @@
     "songs": [
         {
             "id": 1,
-            "name": "bar song",
+            "name": "Frog Machine",
             "artistId": 1,
+            "albumId": 1,
             "metadata": {
-                "createdAt": "2025-05-26T19:15:32.844Z",
+                "createdAt": "2025-05-28T18:50:32.844Z",
                 "createdById": 1
             }
         },
         {
             "id": 2,
-            "name": "foo song",
+            "name": "Blue Swan 5",
             "artistId": 1,
+            "albumId": 2,
             "metadata": {
-                "createdAt": "2025-05-26T19:15:32.844Z",
+                "createdAt": "2025-05-28T18:50:32.844Z",
                 "createdById": 1
             }
         },
         {
             "id": 3,
+            "name": "Animatronica",
+            "artistId": 1,
+            "albumId": 2,
+            "metadata": {
+                "createdAt": "2025-05-28T18:50:32.844Z",
+                "createdById": 1
+            }
+        },
+        {
+            "id": 3000,
             "name": "invalid song",
             "metadata": {
                 "createdAt": "2025-05-26T19:15:32.844Z",
