@@ -15,7 +15,9 @@ import { NzMenuModule } from "ng-zorro-antd/menu";
 export class AppComponent {
     constructor(entityServices: EntityServiceContainer, entityService: EntityService) {
         entityServices.getTracing().enableConsole();
-        entityService.useSongs();
+        entityService.useArtists().useAlbums();
+        entityService.useSongs(); // will load songs together w/ artist + albums in one request
+        // entityService.useSongsNoExpand(); // will load artists + albums in separate requests
     }
 
     isCollapsed = false;

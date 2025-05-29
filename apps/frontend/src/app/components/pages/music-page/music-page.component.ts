@@ -1,10 +1,9 @@
 import { CommonModule } from "@angular/common";
-import { HttpClient } from "@angular/common/http";
 import { ChangeDetectionStrategy, Component, computed, model, Signal, signal } from "@angular/core";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { FormsModule } from "@angular/forms";
 import { EntityWorkspace } from "@entity-space/common";
-import { AlbumDto, ArtistDto, SongDto, SongDtoBlueprint } from "@unchaos/common";
+import { AlbumDto, AlbumDtoBlueprint, ArtistDto, ArtistDtoBlueprint, SongDto, SongDtoBlueprint } from "@unchaos/common";
 import {
     catchAndShowError,
     isDefined,
@@ -65,11 +64,10 @@ import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
 export class MusicPageComponent {
     constructor(
         private readonly workspace: EntityWorkspace,
-        private readonly httpClient: HttpClient,
         private readonly messageService: NzMessageService,
     ) {
-        this.artists = toSignal(this.httpClient.get<ArtistDto[]>("/api/artists"), { initialValue: [] });
-        this.albums = toSignal(this.httpClient.get<AlbumDto[]>("/api/albums"), { initialValue: [] });
+        this.artists = toSignal(this.workspace.from(ArtistDtoBlueprint).get$(), { initialValue: [] });
+        this.albums = toSignal(this.workspace.from(AlbumDtoBlueprint).get$(), { initialValue: [] });
     }
 
     searchText = model("");
@@ -98,7 +96,7 @@ export class MusicPageComponent {
                 .select({ album: true, artist: true })
                 .get$()
                 .pipe(
-                    delay(1000),
+                    delay(250),
                     catchAndShowError<SongDto[]>(this.messageService, []),
                     finalize(() => {
                         this.loading.set(false);
