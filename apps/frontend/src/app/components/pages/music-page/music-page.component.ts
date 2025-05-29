@@ -47,6 +47,7 @@ import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
                     <th>Name</th>
                     <th nzColumnKey="artistId" [nzFilters]="artistFilterOptions()" [nzFilterFn]="true">Artist</th>
                     <th nzColumnKey="albumId" [nzFilters]="albumFilterOptions()" [nzFilterFn]="true">Album</th>
+                    <th>YouTube</th>
                 </thead>
                 <tbody>
                     @for (song of filteredSongs(); track song.id) {
@@ -54,6 +55,9 @@ import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
                             <td>{{ song.name }}</td>
                             <td>{{ song.artist?.name }}</td>
                             <td>{{ song.album?.name }}</td>
+                            <td>
+                                <a *ngIf="song.youtube" [href]="song.youtube" target="_blank">{{ song.youtube }}</a>
+                            </td>
                         </tr>
                     }
                 </tbody>

@@ -13,6 +13,14 @@
                 "createdAt": "2025-05-26T19:15:32.844Z",
                 "createdById": 1
             }
+        },
+        {
+            "id": 2,
+            "name": "So Below",
+            "metadata": {
+                "createdAt": "2025-05-29T04:54:11.279Z",
+                "createdById": 1
+            }
         }
     ],
     "albums": [
@@ -31,6 +39,15 @@
             "name": "Converting Vegetarians II",
             "metadata": {
                 "createdAt": "2025-05-28T18:50:32.844Z",
+                "createdById": 1
+            }
+        },
+        {
+            "id": 3,
+            "artistId": 2,
+            "name": "Left Behind",
+            "metadata": {
+                "createdAt": "2025-05-29T04:54:11.279Z",
                 "createdById": 1
             }
         }
@@ -63,6 +80,17 @@
             "albumId": 2,
             "metadata": {
                 "createdAt": "2025-05-28T18:50:32.844Z",
+                "createdById": 1
+            }
+        },
+        {
+            "id": 4,
+            "name": "Bone",
+            "artistId": 2,
+            "albumId": 3,
+            "youtube": "https://www.youtube.com/watch?v=wYNY78Fh1ro",
+            "metadata": {
+                "createdAt": "2025-05-29T04:54:11.279Z",
                 "createdById": 1
             }
         },

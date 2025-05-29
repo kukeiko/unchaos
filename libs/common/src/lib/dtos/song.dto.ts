@@ -12,6 +12,7 @@ export class SongDtoBlueprint extends DatabaseRecordDtoBlueprint {
     artist = entity(ArtistDtoBlueprint, this.artistId, artist => artist.id, { optional });
     albumId = number();
     album = entity(AlbumDtoBlueprint, this.albumId, album => album.id, { optional });
+    youtube = string({ optional });
 }
 
 register(SongDtoBlueprint, { name: "song", sort: (a, b) => a.name.localeCompare(b.name) });
