@@ -19,7 +19,8 @@
         "paths": {
             "@unchaos/common": ["libs/common/src/index.ts"],
             "@unchaos/frontend/common": ["libs/frontend/common/src/index.ts"],
-            "@unchaos/frontend/music": ["libs/frontend/features/music/src/index.ts"]
+            "@unchaos/frontend/music": ["libs/frontend/features/music/src/index.ts"],
+            "@unchaos/frontend/sandbox": ["libs/frontend/features/sandbox/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

@@ -1,10 +1,11 @@
 import { Routes } from "@angular/router";
+import { HomePageComponent } from "./home-page.component";
 
 export const appRoutes: Routes = [
     { path: "", pathMatch: "full", redirectTo: "/home" },
     {
         path: "home",
-        loadChildren: () => import("./components/pages/home-page/home-page.routes").then(m => m.homePageRoutes),
+        component: HomePageComponent,
     },
     {
         path: "music",
@@ -12,7 +13,6 @@ export const appRoutes: Routes = [
     },
     {
         path: "sandbox",
-        loadChildren: () =>
-            import("./components/pages/sandbox-page/sandbox-page.routes").then(c => c.sandboxPageRoutes),
+        loadChildren: () => import("@unchaos/frontend/sandbox").then(c => c.routes),
     },
 ];

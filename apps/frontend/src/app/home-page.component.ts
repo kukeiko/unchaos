@@ -4,8 +4,14 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 @Component({
     selector: "uc-home-page",
     imports: [CommonModule],
-    templateUrl: "./home-page.component.html",
-    styleUrl: "./home-page.component.scss",
     changeDetection: ChangeDetectionStrategy.OnPush,
+    styles: [
+        `
+            :host {
+                display: block;
+            }
+        `,
+    ],
+    template: `<p>home-page works!</p>`,
 })
 export class HomePageComponent {}

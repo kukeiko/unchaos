@@ -5,4 +5,4 @@ yarn nx generate @nx/angular:component --path=libs/frontend/common/src/lib/compo
 
 yarn nx generate @schematics/angular:service --name=services/error --project=frontend --skipTests=true --no-interactive --dry-run
 
-yarn nx generate @nx/angular:library --directory=libs/frontend/features/music --name=frontend-music --routing=true --displayBlock=true --flat=true --importPath=@unchaos/frontend/music --inlineStyle=true --inlineTemplate=true --simpleName=true --style=scss --unitTestRunner=vitest --no-interactive --dry-run
+yarn nx generate @nx/angular:library --directory=libs/frontend/features/sandbox --name=frontend-sandbox --routing=true --displayBlock=true --flat=true --importPath=@unchaos/frontend/sandbox --inlineStyle=true --inlineTemplate=true --simpleName=true --style=scss --unitTestRunner=vitest --no-interactive --dry-run
