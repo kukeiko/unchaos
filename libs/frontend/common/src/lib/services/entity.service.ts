@@ -38,16 +38,12 @@ export class EntityService {
             where: { albumId: { $inArray: true, $optional: true }, artistId: { $inArray: true, $optional: true } },
             select: { album: true, artist: true },
             load: ({ criteria: { albumId, artistId }, selection: { album, artist } }) => {
-                // [todo] it is hard to understand which values "album" and "artist" can be
-                // [todo] selection values are inconvenient:
-                //  - if user provides "album: true", then "album" should be "true | undefined"
-                //  - if they provide an object for "album", it should be "TypedEntitySelection<T> | undefined" (or maybe PackedEntitySelection<T>)
                 // [todo] criteria would be more convenient if we didn't have to access like this: "albumId?.value" but instead just "albumId"
                 //  - supporting multiple criteria types should still be possible, but just having one type is probably much more common
                 return this.httpClient.get<SongDto[]>("api/songs", {
                     params: toQueryParams({
-                        album: album ? true : undefined,
-                        artist: artist ? true : undefined,
+                        album,
+                        artist,
                         albumId: albumId?.value,
                         artistId: artistId?.value,
                     }),
