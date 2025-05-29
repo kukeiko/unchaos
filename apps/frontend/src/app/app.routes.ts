@@ -8,10 +8,11 @@ export const appRoutes: Routes = [
     },
     {
         path: "music",
-        loadChildren: () => import("./components/pages/music-page/music-page.routes").then(c => c.musicPageRoutes),
+        loadChildren: () => import("@unchaos/frontend/music").then(c => c.routes),
     },
     {
         path: "sandbox",
-        loadChildren: () => import("./components/pages/sandbox-page/sandbox-page.routes").then(c => c.sandboxPageRoutes),
+        loadChildren: () =>
+            import("./components/pages/sandbox-page/sandbox-page.routes").then(c => c.sandboxPageRoutes),
     },
 ];
