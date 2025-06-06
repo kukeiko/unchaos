@@ -2269,52 +2269,52 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@entity-space/common@npm:0.7.0-alpha.2":
-  version: 0.7.0-alpha.2
-  resolution: "@entity-space/common@npm:0.7.0-alpha.2"
+"@entity-space/common@npm:0.7.0-alpha.4":
+  version: 0.7.0-alpha.4
+  resolution: "@entity-space/common@npm:0.7.0-alpha.4"
   dependencies:
-    "@entity-space/elements": "npm:0.7.0-alpha.2"
-    "@entity-space/execution": "npm:0.7.0-alpha.2"
-  checksum: 10c0/bd73a7eeee42bdd29f6a8f037bf5bcc8f49cb77eab8bc2c83c0b2025233d7717c07ae08463ea5c60806d7b52300d82f167a0b14ab192bdab15c1f843cb6c1889
+    "@entity-space/elements": "npm:0.7.0-alpha.4"
+    "@entity-space/execution": "npm:0.7.0-alpha.4"
+  checksum: 10c0/ca415af8ee30a9bbf11972f9bd613b6b525f003405950c2f261adf7cded7600eac2d96872d2206aa1c427d9d2c2b85e7487edb6b22f49dbda0f8e09b293bbdd6
   languageName: node
   linkType: hard
 
-"@entity-space/elements@npm:0.7.0-alpha.2":
-  version: 0.7.0-alpha.2
-  resolution: "@entity-space/elements@npm:0.7.0-alpha.2"
+"@entity-space/elements@npm:0.7.0-alpha.4":
+  version: 0.7.0-alpha.4
+  resolution: "@entity-space/elements@npm:0.7.0-alpha.4"
   dependencies:
-    "@entity-space/lexer": "npm:0.7.0-alpha.2"
-    "@entity-space/utils": "npm:0.7.0-alpha.2"
+    "@entity-space/lexer": "npm:0.7.0-alpha.4"
+    "@entity-space/utils": "npm:0.7.0-alpha.4"
     lodash: "npm:4.17.21"
-  checksum: 10c0/32c6964c3163cb0da70253e12ebe12f1dc64f1744e48611ad47b6ffa33ef358ff9f2ee2235e8d0c7617fc08178d842f8e580609148d832cb96b3a244773c8332
+  checksum: 10c0/410d798c8f410c0a4185b62449ce5bafe3cf7e410e1f7bb6067ab787ce830d427e6e616c017620a3a869afd7010ce3b8703510c1c2b159245b3a140f31c5c948
   languageName: node
   linkType: hard
 
-"@entity-space/execution@npm:0.7.0-alpha.2":
-  version: 0.7.0-alpha.2
-  resolution: "@entity-space/execution@npm:0.7.0-alpha.2"
+"@entity-space/execution@npm:0.7.0-alpha.4":
+  version: 0.7.0-alpha.4
+  resolution: "@entity-space/execution@npm:0.7.0-alpha.4"
   dependencies:
-    "@entity-space/elements": "npm:0.7.0-alpha.2"
-    "@entity-space/utils": "npm:0.7.0-alpha.2"
+    "@entity-space/elements": "npm:0.7.0-alpha.4"
+    "@entity-space/utils": "npm:0.7.0-alpha.4"
   peerDependencies:
     rxjs: ^7.4.0
-  checksum: 10c0/85e72ed2132b02e473fa1981bcced33e9e96018785165a3390dfc78f8ca34194ec835d17e6f11652bd8b95a1ff9a4f8bc83539b3ec1e894bac6cddc68d4f3c2f
+  checksum: 10c0/9e3713f4add446dfb1e2cfcc4c383e865f89846bf5aaf372f116c9f53952c71c0086a97517705136efe6991e7d88be7205b04d648adef1b648b3976461b2eaa1
   languageName: node
   linkType: hard
 
-"@entity-space/lexer@npm:0.7.0-alpha.2":
-  version: 0.7.0-alpha.2
-  resolution: "@entity-space/lexer@npm:0.7.0-alpha.2"
+"@entity-space/lexer@npm:0.7.0-alpha.4":
+  version: 0.7.0-alpha.4
+  resolution: "@entity-space/lexer@npm:0.7.0-alpha.4"
   dependencies:
-    "@entity-space/utils": "npm:0.7.0-alpha.2"
-  checksum: 10c0/d517263dc36feef14550f5c4ae5c43cdb434affe1922273d18cd0850083075382f13c095b8d4ce5145184f8d0a8bc688b2396257daa0990a41a0099bf7682897
+    "@entity-space/utils": "npm:0.7.0-alpha.4"
+  checksum: 10c0/373b65556492134717aaa2138bcec837216bbe58863ad56b222860b4aae036a8e5b11e06e05c5cff6149fc047c2db499946c4b86744cd5be647a1f5a59750ac7
   languageName: node
   linkType: hard
 
-"@entity-space/utils@npm:0.7.0-alpha.2":
-  version: 0.7.0-alpha.2
-  resolution: "@entity-space/utils@npm:0.7.0-alpha.2"
-  checksum: 10c0/8631f304f1caeb3cc3adc99b692a7e48dfc629ad08d303e0b05cadcfa5cc9daf43b43891e15b5377fb7341bed5e31bf62fa0f70f93b15dfdc112057dcd6bf562
+"@entity-space/utils@npm:0.7.0-alpha.4":
+  version: 0.7.0-alpha.4
+  resolution: "@entity-space/utils@npm:0.7.0-alpha.4"
+  checksum: 10c0/f94819592c0d6cd1f61c37309284598052e73cf156904c88c57d8cbe59e9e296ecfaed5fcbe08f644c0d4e5b7508a35a072890a57ec43275e44b2ad2f93cea87
   languageName: node
   linkType: hard
 
@@ -6074,6 +6074,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:4.17.17":
+  version: 4.17.17
+  resolution: "@types/lodash@npm:4.17.17"
+  checksum: 10c0/8e75df02a15f04d4322c5a503e4efd0e7a92470570ce80f17e9f11ce2b1f1a7c994009c9bcff39f07e0f9ffd8ccaff09b3598997c404b801abd5a7eee5a639dc
+  languageName: node
+  linkType: hard
+
 "@types/mime@npm:^1":
   version: 1.3.5
   resolution: "@types/mime@npm:1.3.5"
@@ -6352,7 +6359,7 @@ __metadata:
     "@angular/platform-browser": "npm:~19.2.0"
     "@angular/platform-browser-dynamic": "npm:~19.2.0"
     "@angular/router": "npm:~19.2.0"
-    "@entity-space/common": "npm:0.7.0-alpha.2"
+    "@entity-space/common": "npm:0.7.0-alpha.4"
     "@eslint/js": "npm:^9.8.0"
     "@nestjs/common": "npm:^10.0.2"
     "@nestjs/core": "npm:^10.0.2"
@@ -6377,6 +6384,7 @@ __metadata:
     "@swc-node/register": "npm:~1.9.1"
     "@swc/core": "npm:~1.5.7"
     "@swc/helpers": "npm:~0.5.11"
+    "@types/lodash": "npm:4.17.17"
     "@types/node": "npm:18.16.9"
     "@typescript-eslint/utils": "npm:^8.19.0"
     "@vitest/coverage-v8": "npm:^3.0.5"
@@ -6389,6 +6397,7 @@ __metadata:
     jiti: "npm:2.4.2"
     jsdom: "npm:~22.1.0"
     jsonc-eslint-parser: "npm:^2.1.0"
+    lodash: "npm:4.17.21"
     ng-zorro-antd: "npm:^19.3.0"
     nx: "npm:21.1.2"
     prettier: "npm:3.5.3"
