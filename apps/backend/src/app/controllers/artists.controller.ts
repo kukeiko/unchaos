@@ -41,6 +41,7 @@ export class ArtistsController {
 
     @Post()
     async createArtist(@Body() artist: ArtistCreatableDto): Promise<ArtistDto> {
-        return this.workspace.in(ArtistDtoBlueprint).create(artist);
+        // [todo] validate entity
+        return this.workspace.in(ArtistDtoBlueprint).createOne(artist);
     }
 }

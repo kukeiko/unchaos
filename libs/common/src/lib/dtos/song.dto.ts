@@ -18,3 +18,5 @@ export class SongDtoBlueprint extends DatabaseRecordDtoBlueprint {
 register(SongDtoBlueprint, { name: "song", sort: (a, b) => a.name.localeCompare(b.name) });
 
 export type SongDto = EntityBlueprint.Instance<SongDtoBlueprint>;
+export type SongCreatableDto = EntityBlueprint.Creatable<SongDtoBlueprint>;
+export type SongUpdatableDto = EntityBlueprint.Updatable<SongDtoBlueprint>;

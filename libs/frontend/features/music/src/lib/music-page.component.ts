@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { ChangeDetectionStrategy, Component, computed, model, Signal, signal } from "@angular/core";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { FormsModule } from "@angular/forms";
+import { ActivatedRoute, Router, RouterLink, RouterOutlet } from "@angular/router";
 import { EntityWorkspace } from "@entity-space/common";
 import { AlbumDto, AlbumDtoBlueprint, ArtistDto, ArtistDtoBlueprint, SongDto, SongDtoBlueprint } from "@unchaos/common";
 import {
@@ -11,6 +12,7 @@ import {
     SearchBoxComponent,
     toNzTableFilterListItem,
 } from "@unchaos/frontend/common";
+import { NzButtonModule } from "ng-zorro-antd/button";
 import { NzIconModule } from "ng-zorro-antd/icon";
 import { NzInputModule } from "ng-zorro-antd/input";
 import { NzMessageService } from "ng-zorro-antd/message";
@@ -20,7 +22,18 @@ import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
 
 @Component({
     selector: "uc-music-page",
-    imports: [CommonModule, FormsModule, NzTableModule, NzInputModule, NzIconModule, NzSpaceModule, SearchBoxComponent],
+    imports: [
+        CommonModule,
+        FormsModule,
+        RouterOutlet,
+        NzTableModule,
+        NzInputModule,
+        NzIconModule,
+        NzSpaceModule,
+        SearchBoxComponent,
+        NzButtonModule,
+        RouterLink,
+    ],
     changeDetection: ChangeDetectionStrategy.OnPush,
     styles: [
         `
@@ -35,6 +48,9 @@ import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
     ],
     template: `
         <nz-space nzDirection="vertical">
+            <button *nzSpaceItem nz-button [nzType]="'primary'" (click)="openCreateSong()">
+                <span>New Song</span>
+            </button>
             <uc-search-box *nzSpaceItem [(ngModel)]="searchText" placeholder="Search Songs" />
             <nz-table
                 *nzSpaceItem
@@ -48,6 +64,7 @@ import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
                     <th nzColumnKey="artistId" [nzFilters]="artistFilterOptions()" [nzFilterFn]="true">Artist</th>
                     <th nzColumnKey="albumId" [nzFilters]="albumFilterOptions()" [nzFilterFn]="true">Album</th>
                     <th>YouTube</th>
+                    <th></th>
                 </thead>
                 <tbody>
                     @for (song of filteredSongs(); track song.id) {
@@ -58,17 +75,26 @@ import { debounceTime, delay, finalize, ReplaySubject, switchMap } from "rxjs";
                             <td>
                                 <a *ngIf="song.youtube" [href]="song.youtube" target="_blank">{{ song.youtube }}</a>
                             </td>
+                            <td>
+                                <a [routerLink]="['song', song.id]">Edit</a>
+                            </td>
+                            <td>
+                                <a (click)="onDeleteClick(song)">Delete</a>
+                            </td>
                         </tr>
                     }
                 </tbody>
             </nz-table>
         </nz-space>
+        <router-outlet></router-outlet>
     `,
 })
 export class MusicPageComponent {
     constructor(
         private readonly workspace: EntityWorkspace,
         private readonly messageService: NzMessageService,
+        private readonly router: Router,
+        private readonly route: ActivatedRoute,
     ) {
         this.artists = toSignal(this.workspace.from(ArtistDtoBlueprint).get$(), { initialValue: [] });
         this.albums = toSignal(this.workspace.from(AlbumDtoBlueprint).get$(), { initialValue: [] });
@@ -134,5 +160,13 @@ export class MusicPageComponent {
             .join("");
 
         return keywords.every(keyword => subject.includes(keyword));
+    }
+
+    openCreateSong(): void {
+        this.router.navigate(["song/new"], { relativeTo: this.route });
+    }
+
+    async onDeleteClick(song: SongDto): Promise<void> {
+        await this.workspace.in(SongDtoBlueprint).deleteOne(song);
     }
 }

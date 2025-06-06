@@ -24,7 +24,7 @@ export class EntityService {
                 load: ({ criteria: { id } }) => this.artistRepository.getById(id.value),
             })
             .addSource({ load: () => this.artistRepository.getAll() })
-            .addCreateMutator({
+            .addCreateOneMutator({
                 create: ({ entity }) => this.artistRepository.create(entity),
             });
 
@@ -54,7 +54,12 @@ export class EntityService {
                 where: { artistId: { $equals: true } },
                 load: ({ criteria: { artistId } }) => this.songRepository.getByArtistId([artistId.value]),
             })
-            .addSource({ load: () => this.songRepository.getAll() });
+            .addSource({ load: () => this.songRepository.getAll() })
+            .addCreateOneMutator({
+                create: ({ entity }) => this.songRepository.create(entity),
+            })
+            .addUpdateOneMutator({ update: ({ entity }) => this.songRepository.update(entity) })
+            .addDeleteOneMutator({ delete: ({ entity }) => this.songRepository.delete(entity) });
 
         return this;
     }

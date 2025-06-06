@@ -1,15 +1,14 @@
 import { EntityBlueprint } from "@entity-space/common";
 import { ArtistDtoBlueprint } from "./artist.dto";
-import { RecordMetadataDtoBlueprint } from "./record-metadata.dto";
+import { DatabaseRecordDtoBlueprint } from "./database-record.dto";
 
 const { register, id, string, number, entity, optional } = EntityBlueprint;
 
-export class AlbumDtoBlueprint {
+export class AlbumDtoBlueprint extends DatabaseRecordDtoBlueprint {
     id = id();
     name = string();
     artistId = number();
     artist = entity(ArtistDtoBlueprint, this.artistId, artist => artist.id, { optional });
-    metadata = entity(RecordMetadataDtoBlueprint);
 }
 
 register(AlbumDtoBlueprint, { name: "album" });

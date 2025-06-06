@@ -67,7 +67,16 @@
             },
             "defaultConfiguration": "development",
             "options": {
-                "proxyConfig": "apps/frontend/proxy.conf.json"
+                "proxyConfig": "apps/frontend/proxy.conf.json",
+                "prebundle": {
+                    "exclude": [
+                        "@entity-space/common",
+                        "@entity-space/elements",
+                        "@entity-space/execution",
+                        "@entity-space/lexer",
+                        "@entity-space/utils"
+                    ]
+                }
             }
         },
         "extract-i18n": {
